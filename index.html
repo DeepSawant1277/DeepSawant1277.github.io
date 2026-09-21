@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Deep Sawant — CSE AI & ML student, developer and builder.">
+<title>Deep Sawant | AI & ML Developer</title>
+<style>
+:root{--bg:#05070d;--bg2:#0b1020;--card:rgba(13,19,35,.72);--text:#f5f7ff;--muted:#a8b2c8;--line:rgba(255,255,255,.09);--cyan:#65e7ff;--purple:#9d7cff;--green:#43f0a7;--shadow:0 20px 70px rgba(0,0,0,.3)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--text);background:radial-gradient(circle at 10% 0%,rgba(101,231,255,.11),transparent 28%),radial-gradient(circle at 90% 10%,rgba(157,124,255,.13),transparent 30%),var(--bg);overflow-x:hidden}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}
+#particles{position:fixed;inset:0;z-index:-3;pointer-events:none}.grid-bg{position:fixed;inset:0;z-index:-2;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:55px 55px;mask-image:linear-gradient(to bottom,black,transparent 80%)}
+.cursor-glow{position:fixed;width:260px;height:260px;border-radius:50%;pointer-events:none;z-index:-1;background:radial-gradient(circle,rgba(101,231,255,.11),transparent 65%);transform:translate(-50%,-50%)}
+.container{width:min(1140px,92%);margin:auto}.section{padding:105px 0}.section-title{font-size:clamp(2rem,4vw,3rem);margin-bottom:10px}.section-title span{background:linear-gradient(90deg,var(--cyan),var(--purple),var(--green));-webkit-background-clip:text;color:transparent}.sub{color:var(--muted);margin-bottom:35px}
+nav{position:fixed;top:0;width:100%;z-index:50;background:rgba(5,7,13,.7);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:950;font-size:1.35rem}.logo i{color:var(--cyan);font-style:normal}.navlinks{display:flex;gap:23px;color:var(--muted);font-size:.9rem}.navlinks a{transition:.2s}.navlinks a:hover,.navlinks a.active{color:var(--cyan)}.menu{display:none;border:1px solid var(--line);background:var(--card);color:white;border-radius:10px;padding:8px 11px}
+.hero{min-height:100vh;padding-top:120px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:60px}.eyebrow{display:inline-flex;border:1px solid rgba(101,231,255,.25);background:rgba(101,231,255,.05);color:var(--cyan);padding:7px 12px;border-radius:999px;font-size:.82rem;margin-bottom:20px}.hero h1{font-size:clamp(3.5rem,8vw,7rem);line-height:.9;letter-spacing:-5px}.gradient{background:linear-gradient(90deg,var(--cyan),var(--purple),var(--green));-webkit-background-clip:text;color:transparent}.typed{color:var(--cyan);min-height:1.6em}.hero p{color:var(--muted);max-width:700px;font-size:1.08rem;margin:22px 0}.buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:12px 18px;border-radius:12px;border:1px solid var(--line);font-weight:800;cursor:pointer;display:inline-block}.primary{background:linear-gradient(100deg,var(--cyan),var(--purple));color:#07101a;border:0}.ghost{background:rgba(255,255,255,.035)}
+.profile-wrap{display:grid;place-items:center}.profile{width:min(390px,82vw);aspect-ratio:1;border-radius:50%;padding:8px;background:conic-gradient(from 0deg,var(--cyan),var(--purple),var(--green),var(--cyan));box-shadow:0 0 100px rgba(101,231,255,.16);animation:spinGlow 7s linear infinite}.profile-inner{height:100%;border-radius:50%;background:radial-gradient(circle at 50% 38%,#26314d, #0a0e19 58%);display:grid;place-items:center;border:8px solid #070a12;overflow:hidden}.avatar{font-size:7rem;font-weight:950;letter-spacing:-8px;background:linear-gradient(135deg,#fff,var(--cyan));-webkit-background-clip:text;color:transparent}.profile-label{position:absolute;margin-top:310px;background:rgba(6,9,16,.85);border:1px solid var(--line);padding:9px 13px;border-radius:12px;backdrop-filter:blur(10px);font-size:.82rem;color:var(--muted)}@keyframes spinGlow{50%{transform:rotate(4deg) scale(1.025)}100%{transform:rotate(0)}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}.stat{padding:18px;border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:14px}.stat strong{font-size:1.55rem;display:block;color:var(--cyan)}.stat span{font-size:.78rem;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:23px;backdrop-filter:blur(14px);box-shadow:var(--shadow);transition:.3s}.card:hover{transform:translateY(-6px);border-color:rgba(101,231,255,.25)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.about{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}.card p{color:var(--muted);font-size:.94rem}.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}.fact{border:1px solid var(--line);border-radius:12px;padding:13px;background:rgba(255,255,255,.02)}.fact b{display:block;color:var(--cyan);font-size:.8rem}.tags{margin-top:13px}.tag{display:inline-block;padding:5px 8px;border-radius:8px;background:rgba(255,255,255,.06);font-size:.72rem;color:#dbe4f7;margin:4px 4px 0 0}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.skill{padding:17px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.025)}.skill b{font-size:1rem}.bar{height:6px;background:rgba(255,255,255,.08);border-radius:10px;margin-top:11px;overflow:hidden}.bar i{display:block;height:100%;width:var(--w);background:linear-gradient(90deg,var(--cyan),var(--purple));border-radius:inherit}
+.project-tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}.filter{border:1px solid var(--line);background:rgba(255,255,255,.035);color:var(--muted);padding:8px 12px;border-radius:10px;cursor:pointer}.filter.active{color:#07101a;background:var(--cyan)}.project-card{cursor:pointer}.project-card .icon{font-size:1.6rem}.project-card h3{margin:8px 0}.project-card small{color:var(--cyan);font-weight:800}.repo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.repo{min-height:170px}.repo h3{font-size:1rem}.repo-meta{display:flex;gap:12px;color:var(--muted);font-size:.75rem;margin-top:13px}.repo a{color:var(--cyan);display:inline-block;margin-top:14px;font-weight:800}
+.timeline{border-left:1px solid rgba(101,231,255,.35);padding-left:25px}.timeline-item{position:relative;margin-bottom:25px}.timeline-item:before{content:"";position:absolute;left:-31px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--cyan);box-shadow:0 0 18px var(--cyan)}.timeline-item p{color:var(--muted);margin-top:4px}
+.cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.cert{min-height:145px}.cert .cert-icon{font-size:1.7rem}
+.github{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px}.github-profile{display:flex;gap:15px;align-items:center}.github-avatar{width:64px;height:64px;border-radius:50%;border:2px solid var(--cyan)}.github-name{font-weight:900}.github-handle{color:var(--cyan);font-size:.85rem}.github-note{color:var(--muted);font-size:.85rem;margin-top:13px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact-links{display:grid;gap:12px}.contact-link{padding:16px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.025)}.contact-link span{color:var(--muted);font-size:.78rem;display:block}.contact-link b{color:var(--cyan)}form{display:grid;gap:12px}input,textarea{width:100%;border:1px solid var(--line);background:rgba(255,255,255,.04);color:white;border-radius:11px;padding:13px;outline:none}textarea{min-height:145px;resize:vertical}input:focus,textarea:focus{border-color:rgba(101,231,255,.45)}
+footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:var(--muted);font-size:.85rem}.backtop{position:fixed;right:22px;bottom:22px;width:45px;height:45px;border-radius:50%;border:1px solid var(--line);background:rgba(10,15,26,.8);color:var(--cyan);cursor:pointer;display:none;z-index:40}.backtop.show{display:block}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}.modal{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(9px);display:none;place-items:center;z-index:100;padding:20px}.modal.show{display:grid}.modal-box{width:min(680px,100%);background:#0b1020;border:1px solid var(--line);border-radius:20px;padding:28px;position:relative;max-height:85vh;overflow:auto}.close{position:absolute;right:15px;top:12px;background:none;border:0;color:white;font-size:1.6rem;cursor:pointer}
+@media(max-width:900px){.navlinks{display:none;position:absolute;top:72px;left:4%;right:4%;padding:15px;background:rgba(8,12,21,.96);border:1px solid var(--line);border-radius:14px;flex-direction:column}.navlinks.open{display:flex}.menu{display:block}.hero,.about,.github,.contact{grid-template-columns:1fr}.grid,.repo-grid{grid-template-columns:1fr 1fr}.skills{grid-template-columns:1fr 1fr}.cert-grid{grid-template-columns:1fr 1fr}.profile{width:290px}.profile-label{margin-top:225px}}
+@media(max-width:560px){.hero h1{font-size:3.5rem;letter-spacing:-3px}.grid,.repo-grid,.skills,.cert-grid,.stats,.facts{grid-template-columns:1fr}.section{padding:75px 0}}
+</style>
+</head>
+<body>
+<canvas id="particles"></canvas><div class="grid-bg"></div><div class="cursor-glow"></div>
+
+<nav><div class="container nav">
+<a class="logo" href="#home">Deep<span>.</span></a>
+<div class="navlinks">
+<a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#github">GitHub</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a>
+</div><button class="menu" aria-label="Menu">☰</button>
+</div></nav>
+
+<main>
+<section id="home" class="hero container">
+<div>
+<span class="eyebrow">CSE • AI & ML • Builder</span>
+<h1>Hi, I'm<br><span class="gradient">Deep Sawant.</span></h1>
+<h2 class="typed" id="typed"></h2>
+<p>I build practical software, AI-powered applications and data-driven solutions. I’m pursuing B.Tech in Computer Science & Engineering with a specialization in Artificial Intelligence & Machine Learning.</p>
+<div class="buttons"><a class="btn primary" href="#projects">Explore My Work</a><a class="btn ghost" href="#contact">Let's Connect</a><a class="btn ghost" href="Deep_Sawant_Resume.pdf" download="Deep_Sawant_Resume.pdf">Download Resume</a></div>
+<div class="stats"><div class="stat"><strong>9.42</strong><span>First-year CGPA</span></div><div class="stat"><strong>9+</strong><span>Featured projects</span></div><div class="stat"><strong>17</strong><span>Credentials & achievements</span></div><div class="stat"><strong>AI/ML</strong><span>Specialization</span></div></div>
+</div>
+<div class="profile-wrap"><div class="profile"><div class="profile-inner"><div class="avatar">DS</div></div></div><div class="profile-label">AI • ML • SOFTWARE • DATA</div></div>
+</section>
+
+<section id="about" class="section reveal"><div class="container">
+<h2 class="section-title">About <span>Me</span></h2><p class="sub">A snapshot of my education, interests and what I like building.</p>
+<div class="about"><div class="card"><h3>Who I am</h3><p style="margin-top:10px">I’m a Computer Science & Engineering student specializing in AI & ML at D.Y. Patil University, Navi Mumbai. I enjoy turning ideas into useful applications and exploring backend development, databases, machine learning and AI APIs.</p><div class="facts"><div class="fact"><b>Education</b>B.Tech CSE — AI & ML</div><div class="fact"><b>University</b>D.Y. Patil University</div><div class="fact"><b>Academic</b>First-year CGPA: 9.42</div><div class="fact"><b>Focus</b>AI • ML • Software</div></div></div>
+<div class="card"><h3>Beyond coding</h3><p style="margin-top:10px">Outside technology, I enjoy sports, reading and volunteering.</p><div class="facts"><div class="fact"><b>⚽</b>Football</div><div class="fact"><b>🏏</b>Cricket</div><div class="fact"><b>🏓</b>Table Tennis</div><div class="fact"><b>♟️</b>Chess</div><div class="fact"><b>📚</b>Reading</div><div class="fact"><b>🤝</b>Volunteering</div></div></div></div>
+</div></section>
+
+<section id="skills" class="section reveal"><div class="container"><h2 class="section-title">My <span>Tech Stack</span></h2><p class="sub">Tools and technologies I work with.</p>
+<div class="skills">
+<div class="skill"><b>Python</b><div class="bar"><i style="--w:90%"></i></div><small>AI/ML • Flask • FastAPI</small></div>
+<div class="skill"><b>Java</b><div class="bar"><i style="--w:85%"></i></div><small>Swing • JavaFX • JDBC</small></div>
+<div class="skill"><b>C</b><div class="bar"><i style="--w:78%"></i></div><small>Algorithms • DSA</small></div>
+<div class="skill"><b>SQL</b><div class="bar"><i style="--w:86%"></i></div><small>MySQL • Oracle</small></div>
+<div class="skill"><b>AI / ML</b><div class="bar"><i style="--w:82%"></i></div><small>Scikit-learn • Prediction</small></div>
+<div class="skill"><b>Data Science</b><div class="bar"><i style="--w:84%"></i></div><small>Pandas • NumPy • Matplotlib</small></div>
+<div class="skill"><b>Web</b><div class="bar"><i style="--w:76%"></i></div><small>React • CSS • Flask</small></div>
+<div class="skill"><b>Cloud & AI APIs</b><div class="bar"><i style="--w:72%"></i></div><small>Oracle Cloud • Gemini API</small></div>
+</div></div></section>
+
+<section id="projects" class="section reveal"><div class="container"><h2 class="section-title">Featured <span>Projects</span></h2><p class="sub">Click a project for more details.</p>
+<div class="project-tools"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="ai">AI / ML</button><button class="filter" data-filter="web">Web</button><button class="filter" data-filter="java">Java</button><button class="filter" data-filter="data">Data</button></div>
+<div class="grid" id="projectGrid">
+<div class="card project-card" data-cat="ai web" data-project="ecogrid"><div class="icon">⚡</div><small>AI • WEB • ENERGY</small><h3>EcoGrid Exchange</h3><p>Community solar energy sharing and P2P trading platform with AI prediction, dynamic pricing, billing and analytics.</p><div class="tags"><span class="tag">AI/ML</span><span class="tag">Web</span><span class="tag">P2P</span></div></div>
+<div class="card project-card" data-cat="ai web" data-project="claimcheck"><div class="icon">🥗</div><small>AI • BACKEND</small><h3>ClaimCheck</h3><p>Marketing claim vs nutrition fact verification tool using product data and contradiction-checking logic.</p><div class="tags"><span class="tag">FastAPI</span><span class="tag">Python</span><span class="tag">Open Food Facts</span></div></div>
+<div class="card project-card" data-cat="java data" data-project="blood"><div class="icon">🩸</div><small>JAVA • DATABASE</small><h3>Blood Donation Camp System</h3><p>Database system for donors, blood stock, hospitals, camps, authentication and administration.</p><div class="tags"><span class="tag">Java Swing</span><span class="tag">MySQL</span><span class="tag">JDBC</span></div></div>
+<div class="card project-card" data-cat="ai web" data-project="movie"><div class="icon">🎬</div><small>AI • WEB</small><h3>Movie Recommendation System</h3><p>Recommendation web app with genre/year filters, movie information and a modern UI.</p><div class="tags"><span class="tag">Flask</span><span class="tag">Python</span><span class="tag">ML</span></div></div>
+<div class="card project-card" data-cat="data" data-project="finance"><div class="icon">💰</div><small>DATA • PYTHON</small><h3>Personal Finance Manager</h3><p>Finance tracker with categorization, CSV storage and ML-based prediction.</p><div class="tags"><span class="tag">Tkinter</span><span class="tag">Pandas</span><span class="tag">ML</span></div></div>
+<div class="card project-card" data-cat="ai web" data-project="exammate"><div class="icon">🤖</div><small>AI • FULL STACK</small><h3>ExamMate AI</h3><p>AI-assisted PDF question generator with FastAPI backend and React frontend.</p><div class="tags"><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">AI</span></div></div>
+<div class="card project-card" data-cat="ai web" data-project="timetable"><div class="icon">📅</div><small>AI • WEB</small><h3>AI Timetable Generator</h3><p>Rule-based timetable generation with AI-assisted evaluation and NEP 2020-oriented planning.</p><div class="tags"><span class="tag">Python</span><span class="tag">Gemini API</span></div></div>
+<div class="card project-card" data-cat="data" data-project="xray"><div class="icon">🩻</div><small>IMAGE PROCESSING</small><h3>X-Ray Enhancement</h3><p>Image enhancement and fracture-detection exploration using histogram equalization and Laplacian transformation.</p><div class="tags"><span class="tag">MATLAB</span><span class="tag">DIP</span></div></div>
+<div class="card project-card" data-cat="java" data-project="puzzle"><div class="icon">🧩</div><small>ALGORITHMS</small><h3>15-Puzzle Solver</h3><p>Algorithmic solution to the 15-puzzle problem for Design and Analysis of Algorithms.</p><div class="tags"><span class="tag">C</span><span class="tag">DAA</span></div></div>
+</div></div></section>
+
+<section id="github" class="section reveal"><div class="container"><h2 class="section-title">My <span>GitHub</span></h2><p class="sub">Live public profile data and repositories loaded from GitHub.</p>
+<div class="github"><div class="card"><div class="github-profile"><img id="ghAvatar" class="github-avatar" alt="GitHub avatar"><div><div class="github-name" id="ghName">Deep Sawant</div><div class="github-handle">@DeepSawant1277</div></div></div><p class="github-note" id="ghBio">Loading GitHub profile…</p><div class="facts"><div class="fact"><b id="ghRepos">—</b>Repositories</div><div class="fact"><b id="ghFollowers">—</b>Followers</div><div class="fact"><b id="ghFollowing">—</b>Following</div><div class="fact"><b id="ghStars">—</b>Stars across public repos</div></div><a class="project-link" href="https://github.com/DeepSawant1277" target="_blank">Open GitHub Profile →</a></div>
+<div class="repo-grid" id="repoGrid"><div class="card repo"><p>Loading repositories…</p></div></div></div>
+</div></section>
+
+<section id="certifications" class="section reveal"><div class="container">
+<h2 class="section-title">Certifi<span>cations & Achievements</span></h2>
+<p class="sub">Professional certifications plus Microsoft Learn AI achievements.</p>
+<div class="project-tools">
+<button class="filter active cert-filter" data-certfilter="all">All <span>17</span></button>
+<button class="filter cert-filter" data-certfilter="cert">Certifications <span>6</span></button>
+<button class="filter cert-filter" data-certfilter="learn">Microsoft Learn <span>11</span></button>
+</div>
+<div class="cert-grid" id="certGrid"><div class="card cert certificate-card" data-kind="cert">
+      <div class="cert-icon">☁️</div>
+      <small style="color:var(--cyan);font-weight:800">AWS</small>
+      <h3>Fundamentals of Machine Learning and Artificial Intelligence</h3>
+      <p>AWS Training & Certification</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:13px">
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" target="_blank" rel="noopener">View</a>
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" download>Download</a>
+      </div>
+    </div><div class="card cert certificate-card" data-kind="cert">
+      <div class="cert-icon">☁️</div>
+      <small style="color:var(--cyan);font-weight:800">ORACLE</small>
+      <h3>OCI 2025 Certified AI Foundations Associate</h3>
+      <p>Oracle</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:13px">
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" target="_blank" rel="noopener">View</a>
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" download>Download</a>
+      </div>
+    </div><div class="card cert certificate-card" data-kind="cert">
+      <div class="cert-icon">✨</div>
+      <small style="color:var(--cyan);font-weight:800">ORACLE</small>
+      <h3>OCI 2025 Certified Foundations Associate</h3>
+      <p>Oracle</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:13px">
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" target="_blank" rel="noopener">View</a>
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" download>Download</a>
+      </div>
+    </div><div class="card cert certificate-card" data-kind="cert">
+      <div class="cert-icon">🗄️</div>
+      <small style="color:var(--cyan);font-weight:800">ORACLE</small>
+      <h3>Oracle Data Platform 2025 Certified Foundations Associate</h3>
+      <p>Oracle</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:13px">
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" target="_blank" rel="noopener">View</a>
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" download>Download</a>
+      </div>
+    </div><div class="card cert certificate-card" data-kind="cert">
+      <div class="cert-icon">🤖</div>
+      <small style="color:var(--cyan);font-weight:800">ORACLE</small>
+      <h3>OCI 2025 Certified Generative AI Professional</h3>
+      <p>Oracle</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:13px">
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" target="_blank" rel="noopener">View</a>
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" download>Download</a>
+      </div>
+    </div><div class="card cert certificate-card" data-kind="cert">
+      <div class="cert-icon">🔎</div>
+      <small style="color:var(--cyan);font-weight:800">ORACLE</small>
+      <h3>Oracle AI Vector Search Certified Professional</h3>
+      <p>Oracle</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:13px">
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" target="_blank" rel="noopener">View</a>
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" download>Download</a>
+      </div>
+    </div><div class="card cert certificate-card" data-kind="learn">
+      <div class="cert-icon">🧠</div>
+      <small style="color:var(--cyan);font-weight:800">MICROSOFT LEARN</small>
+      <h3>Create a multimodal analysis solution with Azure Content Understanding</h3>
+      <p>Microsoft Learn</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:13px">
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" target="_blank" rel="noopener">View</a>
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" download>Download</a>
+      </div>
+    </div><div class="card cert certificate-card" data-kind="learn">
+      <div class="cert-icon">🧠</div>
+      <small style="color:var(--cyan);font-weight:800">MICROSOFT LEARN</small>
+      <h3>Introduction to AI concepts</h3>
+      <p>Microsoft Learn</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:13px">
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" target="_blank" rel="noopener">View</a>
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" download>Download</a>
+      </div>
+    </div><div class="card cert certificate-card" data-kind="learn">
+      <div class="cert-icon">✨</div>
+      <small style="color:var(--cyan);font-weight:800">MICROSOFT LEARN</small>
+      <h3>Introduction to generative AI and agents</h3>
+      <p>Microsoft Learn</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:13px">
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" target="_blank" rel="noopener">View</a>
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" download>Download</a>
+      </div>
+    </div><div class="card cert certificate-card" data-kind="learn">
+      <div class="cert-icon">🗣️</div>
+      <small style="color:var(--cyan);font-weight:800">MICROSOFT LEARN</small>
+      <h3>Introduction to natural language processing concepts</h3>
+      <p>Microsoft Learn</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:13px">
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" target="_blank" rel="noopener">View</a>
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" download>Download</a>
+      </div>
+    </div><div class="card cert certificate-card" data-kind="learn">
+      <div class="cert-icon">🎙️</div>
+      <small style="color:var(--cyan);font-weight:800">MICROSOFT LEARN</small>
+      <h3>Introduction to AI speech concepts</h3>
+      <p>Microsoft Learn</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:13px">
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" target="_blank" rel="noopener">View</a>
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" download>Download</a>
+      </div>
+    </div><div class="card cert certificate-card" data-kind="learn">
+      <div class="cert-icon">👁️</div>
+      <small style="color:var(--cyan);font-weight:800">MICROSOFT LEARN</small>
+      <h3>Introduction to computer vision concepts</h3>
+      <p>Microsoft Learn</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:13px">
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" target="_blank" rel="noopener">View</a>
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" download>Download</a>
+      </div>
+    </div><div class="card cert certificate-card" data-kind="learn">
+      <div class="cert-icon">📄</div>
+      <small style="color:var(--cyan);font-weight:800">MICROSOFT LEARN</small>
+      <h3>Introduction to AI-powered information extraction concepts</h3>
+      <p>Microsoft Learn</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:13px">
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" target="_blank" rel="noopener">View</a>
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" download>Download</a>
+      </div>
+    </div><div class="card cert certificate-card" data-kind="learn">
+      <div class="cert-icon">🛠️</div>
+      <small style="color:var(--cyan);font-weight:800">MICROSOFT LEARN</small>
+      <h3>Plan and prepare to develop AI solutions on Azure</h3>
+      <p>Microsoft Learn</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:13px">
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" target="_blank" rel="noopener">View</a>
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" download>Download</a>
+      </div>
+    </div><div class="card cert certificate-card" data-kind="learn">
+      <div class="cert-icon">🤖</div>
+      <small style="color:var(--cyan);font-weight:800">MICROSOFT LEARN</small>
+      <h3>Get started with AI agent development on Azure</h3>
+      <p>Microsoft Learn</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:13px">
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" target="_blank" rel="noopener">View</a>
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" download>Download</a>
+      </div>
+    </div><div class="card cert certificate-card" data-kind="learn">
+      <div class="cert-icon">📄</div>
+      <small style="color:var(--cyan);font-weight:800">MICROSOFT LEARN</small>
+      <h3>Get started with AI-powered information extraction in Azure</h3>
+      <p>Microsoft Learn</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:13px">
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" target="_blank" rel="noopener">View</a>
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" download>Download</a>
+      </div>
+    </div><div class="card cert certificate-card" data-kind="learn">
+      <div class="cert-icon">☁️</div>
+      <small style="color:var(--cyan);font-weight:800">MICROSOFT LEARN</small>
+      <h3>Get started with AI in Azure</h3>
+      <p>Microsoft Learn</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:13px">
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" target="_blank" rel="noopener">View</a>
+        <a class="btn ghost" style="padding:8px 11px;font-size:.75rem" href="certificates/\1" download>Download</a>
+      </div>
+    </div></div>
+</div></section>
+
+<section class="section reveal"><div class="container"><h2 class="section-title">My <span>Journey</span></h2><p class="sub">Where my learning and projects are taking me.</p><div class="timeline">
+<div class="timeline-item"><h3>B.Tech — CSE (AI & ML)</h3><p>D.Y. Patil University, Navi Mumbai — building foundations in programming, DBMS, algorithms, AI/ML and software engineering.</p></div>
+<div class="timeline-item"><h3>Project-Based Learning</h3><p>Building database systems, recommendation apps, AI tools, energy platforms and data-driven applications.</p></div>
+<div class="timeline-item"><h3>AI Engineering Direction</h3><p>Deepening practical skills in Python, ML libraries, FastAPI, AI APIs and cloud technologies.</p></div>
+</div></div></section>
+
+<section id="contact" class="section reveal"><div class="container"><h2 class="section-title">Let's <span>Connect</span></h2><p class="sub">Have an idea, project or collaboration in mind?</p>
+<div class="contact"><div class="contact-links">
+<a class="contact-link" href="mailto:deepsawant1277@gmail.com"><span>Email</span><b>deepsawant1277@gmail.com</b></a>
+<a class="contact-link" href="https://github.com/DeepSawant1277" target="_blank"><span>GitHub</span><b>github.com/DeepSawant1277</b></a>
+<a class="contact-link" href="https://www.linkedin.com/in/deep-sawant-63985a324" target="_blank"><span>LinkedIn</span><b>linkedin.com/in/deep-sawant-63985a324</b></a>
+<a class="contact-link" href="https://github.com/DeepSawant1277" target="_blank"><span>Developer Profile</span><b>View my work →</b></a>
+</div>
+<div class="card"><form id="contactForm"><input id="name" required placeholder="Your name"><input id="email" type="email" required placeholder="Your email"><textarea id="message" required placeholder="Your message"></textarea><button class="btn primary" type="submit">Send via Email</button></form></div></div>
+</div></section>
+</main>
+
+<button class="backtop" id="backtop">↑</button>
+<div class="modal" id="modal"><div class="modal-box"><button class="close" id="close">×</button><div id="modalContent"></div></div></div>
+<footer>© 2026 Deep Sawant • Built with HTML, CSS & JavaScript • AI & ML Developer Portfolio</footer>
+
+<script>
+// Typing animation
+const roles=["AI/ML Developer","Backend Developer","CSE Student","Software Builder","Data & AI Enthusiast"];
+let ri=0,ci=0,deleting=false;
+function type(){const el=document.getElementById("typed"),word=roles[ri];el.textContent=word.slice(0,ci);if(!deleting&&ci<word.length){ci++;setTimeout(type,85)}else if(!deleting){deleting=true;setTimeout(type,1200)}else if(ci>0){ci--;setTimeout(type,45)}else{deleting=false;ri=(ri+1)%roles.length;setTimeout(type,300)}}type();
+
+// Mobile nav
+document.querySelector(".menu").onclick=()=>document.querySelector(".navlinks").classList.toggle("open");
+document.querySelectorAll(".navlinks a").forEach(a=>a.onclick=()=>document.querySelector(".navlinks").classList.remove("open"));
+
+// Scroll reveal + active nav
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(x=>obs.observe(x));
+const sections=[...document.querySelectorAll("section[id]")],navs=[...document.querySelectorAll(".navlinks a")];
+window.addEventListener("scroll",()=>{let cur="";sections.forEach(s=>{if(scrollY>=s.offsetTop-180)cur=s.id});navs.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+cur));document.getElementById("backtop").classList.toggle("show",scrollY>600)});
+
+// Cursor glow
+const glow=document.querySelector(".cursor-glow");window.addEventListener("pointermove",e=>{glow.style.left=e.clientX+"px";glow.style.top=e.clientY+"px"});
+
+// Particle background
+const canvas=document.getElementById("particles"),ctx=canvas.getContext("2d");let pts=[];
+function resize(){canvas.width=innerWidth;canvas.height=innerHeight;pts=Array.from({length:Math.min(85,Math.floor(innerWidth/15))},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,r:Math.random()*1.6+.3}))}
+function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>innerWidth)p.vx*=-1;if(p.y<0||p.y>innerHeight)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle="rgba(101,231,255,.45)";ctx.fill()}for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const a=pts[i],b=pts[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<110){ctx.strokeStyle=`rgba(101,231,255,${.08*(1-d/110)})`;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}}requestAnimationFrame(draw)}resize();addEventListener("resize",resize);draw();
+
+// Project filters
+document.querySelectorAll(".filter").forEach(btn=>btn.onclick=()=>{document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));btn.classList.add("active");const f=btn.dataset.filter;document.querySelectorAll(".project-card").forEach(c=>c.style.display=f==="all"||c.dataset.cat.includes(f)?"block":"none")});
+
+// Project modal content
+const projects={
+ecogrid:["⚡ EcoGrid Exchange","Intelligent community solar energy sharing and P2P grid management platform.","AI forecasting, dynamic pricing, energy trading, billing, notifications, analytics and administrator management.","AI/ML • Web • Database"],
+claimcheck:["🥗 ClaimCheck","Marketing Claim vs. Nutrition Fact Verification Tool.","Fetches product information, extracts marketing claims and checks them against nutrition facts using verification logic.","FastAPI • Python • Open Food Facts"],
+blood:["🩸 Blood Donation Camp System","Database management system for blood donation operations.","Donor registration, authentication, blood stock, hospitals, camp scheduling and admin monitoring.","Java Swing • MySQL • JDBC"],
+movie:["🎬 Movie Recommendation System","Recommendation-focused web application.","Genre/year filtering, movie data, recommendation logic and a modern UI.","Python • Flask • ML"],
+finance:["💰 Personal Finance Manager","Desktop finance manager with prediction.","Income/expense categorization, CSV storage and ML-based prediction.","Python • Tkinter • Pandas"],
+exammate:["🤖 ExamMate AI","AI-assisted PDF question generator.","FastAPI backend with React frontend for creating study material from PDFs.","FastAPI • React • AI"],
+timetable:["📅 AI Timetable Generator","Smart timetable generation and evaluation.","Rule-based scheduling combined with Gemini API evaluation and NEP 2020-oriented planning.","Python • Gemini API • Web"],
+xray:["🩻 X-Ray Enhancement","Digital image processing exploration.","Histogram equalization and Laplacian transformation for image enhancement and fracture-detection research.","MATLAB • DIP"],
+puzzle:["🧩 15-Puzzle Solver","Algorithmic 15-puzzle problem solver.","A Design and Analysis of Algorithms project focused on systematic puzzle solving.","C • Algorithms • DAA"]
+};
+const modal=document.getElementById("modal"),mc=document.getElementById("modalContent");
+document.querySelectorAll(".project-card").forEach(c=>c.onclick=()=>{const p=projects[c.dataset.project];mc.innerHTML=`<div style="font-size:2rem">${p[0].split(" ")[0]}</div><h2 style="margin:8px 0">${p[0].substring(p[0].indexOf(" ")+1)}</h2><p style="color:var(--muted);margin:10px 0">${p[1]}</p><h3>Key features</h3><p style="color:var(--muted);margin-top:7px">${p[2]}</p><div class="tags"><span class="tag">${p[3]}</span></div>`;modal.classList.add("show")});
+document.getElementById("close").onclick=()=>modal.classList.remove("show");modal.onclick=e=>{if(e.target===modal)modal.classList.remove("show")};
+
+// Certificate filters
+document.querySelectorAll(".cert-filter").forEach(btn=>btn.onclick=()=>{
+  document.querySelectorAll(".cert-filter").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  const f=btn.dataset.certfilter;
+  document.querySelectorAll(".certificate-card").forEach(c=>c.style.display=(f==="all"||c.dataset.kind===f)?"block":"none");
+});
+
+// GitHub live profile/repositories
+async function loadGitHub(){
+try{
+const user=await fetch("https://api.github.com/users/DeepSawant1277").then(r=>r.ok?r.json():Promise.reject());
+document.getElementById("ghAvatar").src=user.avatar_url;document.getElementById("ghName").textContent=user.name||"Deep Sawant";document.getElementById("ghBio").textContent=user.bio||"Developer building AI, ML and software projects.";document.getElementById("ghRepos").textContent=user.public_repos;document.getElementById("ghFollowers").textContent=user.followers;document.getElementById("ghFollowing").textContent=user.following;
+const repos=await fetch("https://api.github.com/users/DeepSawant1277/repos?sort=updated&per_page=9").then(r=>r.json());
+let stars=0;repos.forEach(r=>stars+=r.stargazers_count||0);document.getElementById("ghStars").textContent=stars;
+const rg=document.getElementById("repoGrid");rg.innerHTML="";
+repos.forEach(r=>{const d=document.createElement("div");d.className="card repo";d.innerHTML=`<h3>${r.name}</h3><p style="margin-top:7px">${r.description||"Public GitHub repository."}</p><div class="repo-meta"><span>★ ${r.stargazers_count}</span><span>⑂ ${r.forks_count}</span><span>${r.language||"Code"}</span></div><a href="${r.html_url}" target="_blank">View Repository →</a>`;rg.appendChild(d)})
+}catch(e){document.getElementById("repoGrid").innerHTML='<div class="card repo"><h3>GitHub data unavailable</h3><p>Please open the profile directly to view repositories.</p><a href="https://github.com/DeepSawant1277" target="_blank">Open GitHub →</a></div>'}
+}loadGitHub();
+
+// Contact form opens user's email client
+document.getElementById("contactForm").onsubmit=e=>{e.preventDefault();const n=document.getElementById("name").value,em=document.getElementById("email").value,m=document.getElementById("message").value;location.href=`mailto:deepsawant1277@gmail.com?subject=${encodeURIComponent("Portfolio Contact from "+n)}&body=${encodeURIComponent("Name: "+n+"\\nEmail: "+em+"\\n\\n"+m)}`};
+document.getElementById("backtop").onclick=()=>scrollTo({top:0,behavior:"smooth"});
+</script>
+</body>
+</html>
